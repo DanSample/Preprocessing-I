@@ -76,8 +76,8 @@ html {
 		flex-direction: column;
 		height: 100%;
 		width: 100%;
-		margin-left: 4.25rem;
-		max-width: 95%;
+		// margin-left: 4.25rem;
+		max-width: 100%;
 		font-family: @fonts;
 		font-size: 1.6rem;
 
@@ -97,6 +97,11 @@ html {
 
 .navBar {
 	background-color: @blueColor;
+	position: fixed;
+	width: 100%;
+	height: 5rem;
+	padding: 1.5rem;
+	opacity: 0.75;
 
 	ul {
 	.flexProp;
@@ -106,33 +111,58 @@ html {
 
 	a {
 		text-decoration: none;
-		color: black;
+		color:#fff;
 		font-size: 2rem;
 	}
 }
 }
 
 /* put a round border around pic and constricted height */
-.profile-pic {
-	border-radius: 10rem;
-	height: 20rem;
-	margin: 3rem 0 3rem 1rem;
+.profilePic {
+	.flexProp;
+	justify-content: center;
+	align-items: flex-end;
+	height: 50rem;
+
+	img {
+		border-radius: 25rem;
+	}
 }
 
 /* Nested <h1> into container */
 .namePhrase {
 	.flexProp;
 	flex-direction: column;
+	align-items: center;
 	width: 100%;
-	height: 20rem;
+	height: 16rem;
+	border-bottom: 0.1rem solid black;
 
 	h1 {
 		font-size: 4rem;
-		margin: 1rem;
+		margin: 5rem 1rem 1rem 1rem;
 	}
 }
 
+/* tried to nest .phrase but becomes non functional */
 .phrase {
 	font-size: 2rem;
 	margin: 1rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+.portfolio {
+	.flexProp;
+	height: 27.75rem;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	p {
+		font-size: 2rem;
+		font-weight: bold;
+	}
 }
