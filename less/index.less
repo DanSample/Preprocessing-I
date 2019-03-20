@@ -67,12 +67,19 @@ table {
 }
 
 /*main CSS*/
-html, body {
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	max-width: 95%;
-	font-family: @fonts;
+
+html {
+	font-size: 62.5%;
+
+ 	body {
+		.flexProp;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		margin-left: 4.25rem;
+		max-width: 95%;
+		font-family: @fonts;
+		font-size: 1.6rem;
 
 	/* Nested media queries */
 
@@ -81,8 +88,17 @@ html, body {
 		max-width: 95%;
 	}
 }
+}
 
-.navBar ul {
+#background {
+	height: 100vh;
+	background-color: @grayShade;
+}
+
+.navBar {
+	background-color: @blueColor;
+
+	ul {
 	.flexProp;
 	flex-direction: row;
 	justify-content: space-around;
@@ -90,14 +106,20 @@ html, body {
 
 	a {
 		text-decoration: none;
+		color: black;
+		font-size: 2rem;
 	}
 }
-
-.profile-pic {
-	height: 20rem;
 }
 
-/* Nested <h1> and <p> into there container */
+/* put a round border around pic and constricted height */
+.profile-pic {
+	border-radius: 10rem;
+	height: 20rem;
+	margin: 3rem 0 3rem 1rem;
+}
+
+/* Nested <h1> into container */
 .namePhrase {
 	.flexProp;
 	flex-direction: column;
@@ -106,10 +128,11 @@ html, body {
 
 	h1 {
 		font-size: 4rem;
-
-		p {
-			font-size: 2rem;
-		}
+		margin: 1rem;
 	}
 }
 
+.phrase {
+	font-size: 2rem;
+	margin: 1rem;
+}

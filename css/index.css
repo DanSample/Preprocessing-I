@@ -138,20 +138,34 @@ table {
   display: flex;
 }
 /*main CSS*/
-html,
-body {
+html {
+  font-size: 62.5%;
+}
+html body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
-  margin: 0;
+  margin-left: 4.25rem;
   max-width: 95%;
   font-family: Helvetica, sans-serif;
+  font-size: 1.6rem;
   /* Nested media queries */
 }
 @media only screen and (max-width: 500px) {
-  html,
-  body {
+  html body {
     max-width: 95%;
   }
+}
+#background {
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+.navBar {
+  background-color: #0099ff;
 }
 .navBar ul {
   display: -webkit-box;
@@ -164,11 +178,16 @@ body {
 }
 .navBar ul a {
   text-decoration: none;
+  color: black;
+  font-size: 2rem;
 }
+/* put a round border around pic and constricted height */
 .profile-pic {
+  border-radius: 10rem;
   height: 20rem;
+  margin: 3rem 0 3rem 1rem;
 }
-/* Nested <h1> and <p> into there container */
+/* Nested <h1> into container */
 .namePhrase {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,7 +199,9 @@ body {
 }
 .namePhrase h1 {
   font-size: 4rem;
+  margin: 1rem;
 }
-.namePhrase h1 p {
+.phrase {
   font-size: 2rem;
+  margin: 1rem;
 }
