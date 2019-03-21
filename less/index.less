@@ -67,6 +67,9 @@ table {
 	display: flex;
 }
 
+.justifyCenter {
+	justify-content: center;
+}
 
 
 /*main CSS*/
@@ -116,7 +119,7 @@ html {
 /* put a round border around pic and constricted height */
 .profilePic {
 	.flexProp;
-	justify-content: center;
+	.justifyCenter;
 	align-items: flex-end;
 	height: 50rem;
 
@@ -243,16 +246,10 @@ h2 {
 	.flexProp;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	.justifyCenter;
 	height: auto;
 	width: 100%;
 	margin-top: 5rem;
-
-	// for tablet
-	// @media only screen and (max-width: 800px) {
-	// 	max-width: 100%;
-	// 	justify-content: center;
-	// }
 
 	h2 {
 		height: 5rem;
@@ -261,7 +258,7 @@ h2 {
 		@media only screen and (max-width: 800px) {
 			max-width: 100%;
 			.flexProp;
-			justify-content: center;
+			.justifyCenter;
 		}
 	}
 
@@ -286,7 +283,7 @@ h2 {
 	.flexProp;
 	width: 100%;
 	height: auto;
-	justify-content: center;
+	.justifyCenter;
 	margin: 3rem 0 3rem 0;
 }
 

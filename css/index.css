@@ -137,6 +137,9 @@ table {
   display: -webkit-flex;
   display: flex;
 }
+.justifyCenter {
+  justify-content: center;
+}
 /*main CSS*/
 html {
   font-size: 62.5%;
