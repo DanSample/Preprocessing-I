@@ -152,12 +152,6 @@ html body {
   max-width: 100%;
   font-family: Helvetica, sans-serif;
   font-size: 1.6rem;
-  /* Nested media queries */
-}
-@media only screen and (max-width: 500px) {
-  html body {
-    max-width: 100%;
-  }
 }
 #background {
   height: 100%;
@@ -165,11 +159,11 @@ html body {
 }
 .navBar {
   background-color: #0099ff;
+  border-radius: 1rem;
   position: fixed;
   width: 100%;
   height: 5rem;
   padding: 1.5rem;
-  opacity: 0.75;
 }
 .navBar ul {
   display: -webkit-box;
@@ -214,8 +208,7 @@ html body {
   font-size: 4rem;
   margin: 5rem 1rem 1rem 1rem;
 }
-/* tried to nest .phrase but becomes non functional */
-.phrase {
+.namePhrase .phrase {
   font-size: 2rem;
   margin: 1rem;
 }
@@ -236,6 +229,18 @@ h2 {
   font-size: 2rem;
   font-weight: bold;
 }
+@media only screen and (max-width: 814px) {
+  .portfolio p {
+    max-width: 16.9em;
+    padding-left: 2.25em;
+  }
+}
+.portfolio button {
+  border: 0.15rem solid black;
+  border-radius: 1rem;
+  font-size: 3rem;
+  padding: 2rem;
+}
 .mainContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,10 +249,22 @@ h2 {
   justify-content: space-evenly;
   align-items: center;
 }
+@media only screen and (max-width: 800px) {
+  .mainContent {
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
 .mainContent .storyTime {
   width: 35rem;
   height: auto;
   padding: 2rem 2rem 2rem 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .mainContent .storyTime {
+    max-width: 100%;
+    padding-left: 3rem;
+  }
 }
 .mainContent .storyTime h2 {
   margin: 2rem 0 2rem 0;
@@ -264,20 +281,91 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  border: 0.25rem solid black;
+  border: 0.15rem solid darkgray;
+  border-radius: 1rem;
   width: 35rem;
   height: auto;
   margin-top: 3.5rem;
 }
 .skillSet h2 {
-  border-bottom: 0.25rem solid black;
+  border-bottom: 0.15rem solid darkgrey;
   width: 100%;
-  height: 5rem;
-  padding: 1rem 0 0 2rem;
+  height: 7rem;
+  padding: 2rem 0 0 9.25rem;
 }
 .skillSet ul li {
-  border-bottom: 0.25rem solid black;
-  width: 34.5rem;
+  border-bottom: 0.15rem solid darkgrey;
+  width: 34.75rem;
   margin: 4.3rem 0 4.3rem 0;
   padding: 0 0 3.5rem 2rem;
+}
+.workHistory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  margin-top: 5rem;
+}
+.workHistory h2 {
+  height: 5rem;
+  width: 80%;
+  border-bottom: 0.15rem solid darkgrey;
+}
+@media only screen and (max-width: 800px) {
+  .workHistory h2 {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+  }
+}
+.workHistory .describeList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5rem;
+  width: 80%;
+  border-bottom: 0.15rem solid darkgrey;
+}
+.workHistory .describeList li {
+  font-weight: bold;
+  padding: 1.75rem;
+}
+.workHistory .jobList {
+  height: auto;
+  width: 80%;
+}
+.workHistory .jobList li {
+  height: 5rem;
+  width: 100%;
+  border-bottom: 0.15rem solid darkgrey;
+  padding: 1.75rem 0 0 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .workHistory .jobList li {
+    max-width: 100%;
+    height: 10em;
+  }
+}
+.workHistory .jobList li li:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+.workHistory footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 3rem 0 3rem 0;
 }

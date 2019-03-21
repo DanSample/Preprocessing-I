@@ -81,14 +81,7 @@ html {
 		max-width: 100%;
 		font-family: @fonts;
 		font-size: 1.6rem;
-
-	/* Nested media queries */
-
-	// for mobile
-	@media only screen and (max-width: 500px) {
-		max-width: 100%;
 	}
-}
 }
 
 #background {
@@ -98,11 +91,11 @@ html {
 
 .navBar {
 	background-color: @blueColor;
+	border-radius: 1rem;
 	position: fixed;
 	width: 100%;
 	height: 5rem;
 	padding: 1.5rem;
-	opacity: 0.75;
 
 	ul {
 	.flexProp;
@@ -143,12 +136,15 @@ html {
 		font-size: 4rem;
 		margin: 5rem 1rem 1rem 1rem;
 	}
-}
 
-/* tried to nest .phrase but becomes non functional */
-.phrase {
-	font-size: 2rem;
-	margin: 1rem;
+	.phrase {
+		font-size: 2rem;
+		margin: 1rem;
+
+		@media only screen and (max-width: 800px) {
+			display: none;
+	}
+	
 }
 
 h2 {
@@ -165,6 +161,19 @@ h2 {
 	p {
 		font-size: 2rem;
 		font-weight: bold;
+
+		// portfolio <p> breaks before 700px so added additional media query
+	@media only screen and (max-width: 814px) {
+		max-width: 16.9em;
+		padding-left: 2.25em;
+	}
+}
+
+	button {
+		border: .15rem solid black;
+		border-radius: 1rem;
+		font-size: 3rem;
+		padding: 2rem;
 	}
 }
 
@@ -173,10 +182,22 @@ h2 {
 	justify-content: space-evenly;
 	align-items: center;
 
+	// for tablet
+	@media only screen and (max-width: 800px) {
+		max-width: 100%;
+		flex-direction: column;
+	}
+
 	.storyTime {
 		width: 35rem;
 		height: auto;
 		padding: 2rem 2rem 2rem 1rem;
+
+		// for tablet
+	@media only screen and (max-width: 800px) {
+		max-width: 100%;
+		padding-left: 3rem;
+	}
 
 		h2 {
 			margin: 2rem 0 2rem 0;
@@ -194,21 +215,22 @@ h2 {
 	.flexProp;
 	flex-wrap: wrap;
 	align-content: center;
-	border: 0.25rem solid black;
+	border: 0.15rem solid darkgray;
+	border-radius: 1rem;
 	width: 35rem;
 	height: auto;
 	margin-top: 3.5rem;
 
 	h2 {
-		border-bottom: 0.25rem solid black;
+		border-bottom: 0.15rem solid darkgrey;
 		width: 100%;
-		height: 5rem;
-		padding: 1rem 0 0 2rem;
+		height: 7rem;
+		padding: 2rem 0 0 9.25rem;
 	}
 
 	ul li {
-		border-bottom: 0.25rem solid black;
-		width: 34.5rem;
+		border-bottom: 0.15rem solid darkgrey;
+		width: 34.75rem;
 		margin: 4.3rem 0 4.3rem 0;
 		padding: 0 0 3.5rem 2rem;
 
@@ -217,3 +239,74 @@ h2 {
 
 }
 
+
+.workHistory {
+	.flexProp;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	width: 100%;
+	margin-top: 5rem;
+
+	// for tablet
+	// @media only screen and (max-width: 800px) {
+	// 	max-width: 100%;
+	// 	justify-content: center;
+	// }
+
+	h2 {
+		height: 5rem;
+		width: 80%;
+		border-bottom: 0.15rem solid darkgrey;
+
+		@media only screen and (max-width: 800px) {
+			max-width: 100%;
+			.flexProp;
+			justify-content: center;
+		}
+	}
+
+	.describeList {
+		.flexProp;
+		flex-direction: row;
+		justify-content: space-between;
+		height: 5rem;
+		width: 80%;
+		border-bottom: 0.15rem solid darkgrey;
+
+		li {
+			font-weight: bold;
+			padding: 1.75rem;
+		}
+	}
+
+	.jobList {
+		height: auto;
+		width: 80%;
+
+		li {
+			height: 5rem;
+			width: 100%;
+			// border-top: 0.15rem solid darkgrey;
+			border-bottom: 0.15rem solid darkgrey;
+			padding: 1.75rem 0 0 1rem;
+			
+			@media only screen and (max-width: 800px) {
+				max-width: 100%;
+				height: 10em;
+		}
+
+			li:nth-child(odd) {
+				background-color: @grayShade;
+			}
+	}
+}
+
+footer {
+	.flexProp;
+	width: 100%;
+	justify-content: center;
+	margin: 3rem 0 3rem 0;
+}
+}
