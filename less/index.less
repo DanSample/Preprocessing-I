@@ -53,7 +53,230 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+/* Variables */
+@import "variables";
+
+/* Mixin */  
+@import "mixins";
+
+.justifyCenter {
+	justify-content: center;
 }
+
+
+/*main CSS*/
+
+html {
+	font-size: 62.5%;
+
+ 	body {
+		.flexProp;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		// margin-left: 4.25rem;
+		max-width: 100%;
+		font-family: @fonts;
+		font-size: 1.6rem;
+	}
+}
+
+#background {
+	height: 100%;
+	background-color: @grayShade;
+}
+
+.navBar {
+	background-color: @blueColor;
+	border-radius: 1rem;
+	position: fixed;
+	width: 100%;
+	height: 5rem;
+	padding: 1.5rem;
+
+	ul {
+	.flexProp;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: baseline;
+
+	a {
+		text-decoration: none;
+		color:#fff;
+		font-size: 2rem;
+	}
+}
+}
+
+/* put a round border around pic and constricted height */
+.profilePic {
+	.flexProp;
+	.justifyCenter;
+	align-items: flex-end;
+	height: 50rem;
+
+	img {
+		border-radius: 25rem;
+
+		@media only screen and (max-width: 500px) {
+			padding-left: 1em;
+		}
+	}
+}
+
+/* Nested <h1> into container */
+.namePhrase {
+	.flexProp;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 16rem;
+	border-bottom: 0.1rem solid black;
+
+	h1 {
+		font-size: 4rem;
+		margin: 5rem 1rem 1rem 1rem;
+
+		@media only screen and (max-width: 500px) {
+			padding-left: 1.5em;
+		}
+	}	
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+.portfolio {
+	.flexProp;
+	height: 27.75rem;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	p {
+		font-size: 2rem;
+		font-weight: bold;
+
+		// portfolio <p> breaks before 700px so added additional media query
+	@media only screen and (max-width: 814px) {
+		max-width: 16.9em;
+		padding-left: 2.25em;
+	}
+}
+
+	button {
+		border: .15rem solid black;
+		border-radius: 1rem;
+		font-size: 3rem;
+		padding: 2rem;
+	}
+}
+
+.mainContent {
+	.flexProp;
+	justify-content: space-evenly;
+	align-items: center;
+
+	// for tablet
+	@media only screen and (max-width: 800px) {
+		max-width: 100%;
+		flex-direction: column;
+	}
+
+	.storyTime {
+		width: 35rem;
+		height: auto;
+		padding: 2rem 2rem 2rem 1rem;
+
+		// for tablet
+	@media only screen and (max-width: 800px) {
+		max-width: 100%;
+		padding-left: 3rem;
+	}
+
+		h2 {
+			margin: 2rem 0 2rem 0;
+		}
+
+			p a {
+				color: @redColor;
+				font-weight: bold;
+				text-decoration: none;
+			}
+		}
+	}
+
+.skillSet {
+	.flexProp;
+	flex-wrap: wrap;
+	align-content: center;
+	border: 0.15rem solid darkgray;
+	border-radius: 1rem;
+	width: 35rem;
+	height: auto;
+	margin-top: 3.5rem;
+
+	h2 {
+		border-bottom: 0.15rem solid darkgrey;
+		width: 100%;
+		height: 7rem;
+		padding: 2rem 0 0 9.25rem;
+	}
+
+	ul li {
+		border-bottom: 0.15rem solid darkgrey;
+		width: 34.75rem;
+		margin: 4.3rem 0 4.3rem 0;
+		padding: 0 0 3.5rem 2rem;
+
+	}
+}
+
+
+.workHistory {
+	.flexProp;
+	flex-direction: column;
+	align-items: center;
+	.justifyCenter;
+	height: auto;
+	width: 100%;
+	margin-top: 5rem;
+
+	h2 {
+		height: 5rem;
+		width: 80%;
+
+		@media only screen and (max-width: 800px) {
+			max-width: 100%;
+			.flexProp;
+			.justifyCenter;
+		}
+	}
+
+	table {
+		font-family: @fonts;
+		border-collapse: collapse;
+		width: 80%;
+
+		td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+			tr:nth-child(even) {
+				background-color: #dddddd;
+			  }  
+	  }
+}
+
+.footer {
+	.flexProp;
+	width: 100%;
+	height: auto;
+	.justifyCenter;
+	margin: 3rem 0 3rem 0;
+}
+
 

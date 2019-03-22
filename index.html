@@ -5,7 +5,7 @@
   <meta charset="utf-8">
 
   <title>My Resume</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/index.css">
 
   <!--[if lt IE 9]>
@@ -14,6 +14,92 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <section id="background">
+    <!-- Nav bar -->
+    <nav class="navBar">
+
+      <!-- Made into a <ul> in case in need to style it more specifically -->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="https://portfolio.danthedev.dev">Portfolio</a></li>
+        <li><a href="https://portfolio.danthedev.dev/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Profile Image -->
+    <div class="profilePic">
+      <img src="images/profile pic 3.jpg">
+    </div>
+
+    <!-- Name and Phrase section -->
+    <section class="namePhrase">
+      <h1>Dan Sample - Entry Level Web Dev</h1>
+      <p class="phrase">“Talk is cheap. Show me the code.” ― Linus Torvalds</p>
+    </section>  
+
+    <!-- This section is built to point people to my portfolio website -->
+    <section class="portfolio">
+        <p>Interested in what I can do? Check out the work I've done and the designs I created.</p>
+          <a href="https://portfolio.danthedev.dev/"> <button>My Portfolio</button></a>
+    </section>
+  </section>  
+  <!-- Main content section. Highlight about who I am and my skillset -->
+  <section class="mainContent">
+    <div class="storyTime">
+      <h2>The Love of Creation</h2>
+        <p>From the time I was a little boy I loved to create. Growing up in a tiny beach town in The Great Northwest was a perfect place for my little mind to run wild. From building sandcastles to treeforts I always loved the idea of designing and creating what I could picture in my mind, but wasn't in front of me....yet.     </p>
+      
+      <h2>The Love of Learning</h2>
+        <p>Fast forward to today, no longer is it sandcastles and treeforts. I get to build websites and applications from the ground up, and falling in love with learning was the first step. Since the day I started at <a class="lambda" href="www.lambdaschool.com">Lambda School</a> I have been learning and working with the leading technologies in the industry. Evey new language, framework, library is a new adventure that in the end adds tools to my skillset and makes me a better developer. My Goal has always been to be the best that I can be wherever I am and with whatever I'm doing.</p>
+    </div>
+
+    <!-- Skillset list -->
+    <div class="skillSet">
+      <h2>My Skillset</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>Video Games</li>
+          <li style="border-bottom: none;margin-bottom: 0;">Telecom Construction</li>
+        </ul>
+    </div>
+  </section>
+
+  <section class="workHistory">
+    <h2>Work History</h2>
+    <table>
+      <tr>
+        <th>Yrs</th>
+        <th>Company</th> 
+        <th>Title</th>
+        <th>Tech Used</th>
+      </tr>
+      <tr>
+        <td>Coming Soon...</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Coming Soon...</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Coming Soon...</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </section>
+
+  <footer class="footer">
+    <p>Copyright DantheDev 2019 (not a real copyright)</p>
+  </footer>
+
 </body>
 </html>
