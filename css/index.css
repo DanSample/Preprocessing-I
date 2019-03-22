@@ -131,6 +131,7 @@ table {
   box-sizing: border-box;
 }
 /* Variables */
+/* Mixin */
 .flexProp {
   display: -webkit-box;
   display: -ms-flexbox;

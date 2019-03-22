@@ -54,18 +54,10 @@ table {
 }
 
 /* Variables */
-@fonts: Helvetica, sans-serif;
-@redColor: #cc0000;
-@blueColor: #0099ff;
-@grayShade: #f2f2f2;
+@import "variables";
 
-// Mixin to set flex properties with vendor prefixes
-.flexProp {
-	display: -webkit-box; 
-	display: -ms-flexbox;
-	display: -webkit-flex;   
-	display: flex;
-}
+/* Mixin */  
+@import "mixins";
 
 .justifyCenter {
 	justify-content: center;
